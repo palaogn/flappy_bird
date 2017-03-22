@@ -12,6 +12,7 @@ This game project has the following:
 
 ```
 npm install
+npm install -g bower
 bower install
 grunt server
 ```
