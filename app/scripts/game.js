@@ -12,6 +12,14 @@ window.Game = (function() {
 		this.player = new window.Player(this.el.find('.Player'), this);
 		this.isPlaying = false;
 
+		//game scales to the size of the screen
+		//only does in the start and on Restart
+		let fontSize = Math.min(
+			window.innerWidth / 102.4,
+			window.innerHeight / 57.6
+		);
+		el.css('fontSize', fontSize + 'px');
+
 		// Cache a bound onFrame since we need it each frame.
 		this.onFrame = this.onFrame.bind(this);
 	};
@@ -83,5 +91,3 @@ window.Game = (function() {
 
 	return Game;
 })();
-
-
