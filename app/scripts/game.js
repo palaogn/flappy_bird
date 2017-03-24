@@ -15,8 +15,8 @@ window.Game = (function() {
 		//game scales to the size of the screen
 		//only does in the start and on Restart
 		let fontSize = Math.min(
-			window.innerWidth / 102.4,
-			window.innerHeight / 57.6
+			window.innerWidth / Game.prototype.WORLD_WIDTH,
+			window.innerHeight / Game.prototype.WORLD_HEIGHT
 		);
 		el.css('fontSize', fontSize + 'px');
 
