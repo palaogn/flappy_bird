@@ -75,55 +75,15 @@ background: #b3e3f9;
 	-webkit-animation: run 1s infinite linear;
 }
 
-.PipeT1_1 {
-	background: url(../images/topPipe.svg) 50% 50% no-repeat;
+.Pipe {
+	background: url(../images/Pipes.svg) 50% 50% no-repeat;
 	width: 12.2em;
-	height: 44.4em;
+	height: 100.6em;
 	position: absolute;
-	top: -20em;
-	left: 122.4em;
+	/*top: -50em;
+	left: 30em; */
+	/* goes out of screen left: 122.4em; */
 	background-size: 100%;
-	/*-webkit-animation: pipeSlide 10s; */
-}
-.PipeB1_1 {
-	background: url(../images/bottomPipe.svg) 50% 50% no-repeat;
-	width: 12.2em;
-	height: 44.4em;
-	position: absolute;
-	top: 35em;
-	left: 122.4em;
-	background-size: 100%;
-	/*-webkit-animation: pipeSlide 10s; */
-}
-.PipeT1_2 {
-	background: url(../images/topPipe.svg) 50% 50% no-repeat;
-	width: 12.2em;
-	height: 44.4em;
-	position: absolute;
-	top: -30em;
-	left: 122.4em;
-	background-size: 100%;
-	 -webkit-animation: pipeSlide 10s linear;
-}
-.PipeB1_2 {
-	background: url(../images/bottomPipe.svg) 50% 50% no-repeat;
-	width: 12.2em;
-	height: 44.4em;
-	position: absolute;
-	top: 25em;
-	left: 122.4em;
-	background-size: 100%;
-	-webkit-animation: pipeSlide 10s linear;
-}
-
-/*Makes the pipe slide from right to left over the screen */
-@-webkit-keyframes pipeSlide {
-	from {
-		left: 122.4em;
-	}
-	to {
-		left: -12.2em;
-	}
 }
 
 /*Makes the ground go from left and right */
