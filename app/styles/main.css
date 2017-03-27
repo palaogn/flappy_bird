@@ -70,14 +70,13 @@ background: white;
 	width: 122.4em;
 	height: 5.8em;
 	background-size: 100%;
-	-webkit-animation: run 0.5s infinite;
+	-webkit-animation: run 2s infinite;
 }
 
 @-webkit-keyframes run {
 	from {
 		left: -10em;
 	}
-
 	to {
 		left: -2em;
 	}
