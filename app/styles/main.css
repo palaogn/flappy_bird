@@ -103,7 +103,7 @@ background: #b3e3f9;
 	top: -30em;
 	left: 122.4em;
 	background-size: 100%;
-	/* -webkit-animation: pipeSlide 10s; */
+	 -webkit-animation: pipeSlide 10s;
 }
 .PipeB1_2 {
 	background: url(../images/bottomPipe.svg) 50% 50% no-repeat;
@@ -113,7 +113,7 @@ background: #b3e3f9;
 	top: 25em;
 	left: 122.4em;
 	background-size: 100%;
-	/*-webkit-animation: pipeSlide 10s; */
+	-webkit-animation: pipeSlide 10s;
 }
 
 /*Makes the pipe slide from right to left over the screen */
