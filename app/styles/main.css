@@ -62,16 +62,16 @@ height: 57.6em;
 margin-left: -51.2em;
 margin-top: -28.8em;
 overflow: hidden;
-background: white;
+background: #b3e3f9;
 }
 .Ground {
-	background: url(../images/Ground.svg) 50% 50% repeat-y;
+	background: url(../images/GroundMin.svg) 50% 50% repeat-x;
 	position: absolute;
 	left: -10em;
-	top: 52em;
+	top: 51.8em;
 	width: 122.4em;
 	height: 5.8em;
-	background-size: 100%;
+	background-size: auto;
 	-webkit-animation: run 1s infinite;
 }
 
@@ -129,9 +129,9 @@ background: white;
 /*Makes the ground go from left and right */
 @-webkit-keyframes run {
 	from {
-		left: -10em;
+		left: -20em;
 	}
 	to {
-		left: -2em;
+		left: -1em;
 	}
 }

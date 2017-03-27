@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="474px" height="58px" viewBox="0 0 474 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="242px" height="58px" viewBox="0 0 242 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
     <title>Slice</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="0" y="1" width="1024" height="58"></rect>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1024" height="58" fill="white">
+        <rect id="path-1" x="-29" y="1" width="1149" height="58"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1149" height="58" fill="white">
             <use xlink:href="#path-1"></use>
         </mask>
-        <rect id="path-3" x="0" y="1" width="1024" height="9"></rect>
-        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1024" height="9" fill="white">
+        <rect id="path-3" x="-29" y="1" width="1149" height="9"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1149" height="9" fill="white">
             <use xlink:href="#path-3"></use>
         </mask>
     </defs>
@@ -20,12 +20,9 @@
             <use stroke="#979797" stroke-width="1" xlink:href="#path-1"></use>
         </g>
         <use id="Rectangle-2" stroke="#6C6262" mask="url(#mask-4)" stroke-width="2" fill="#6C6262" xlink:href="#path-3"></use>
-        <polygon id="Star" stroke="#979797" fill="#D3C119" points="43.5 39.75 34.9771138 43.6127124 36.6048403 35.4313562 29.7096805 29.6372876 39.2385569 28.4436438 43.5 21 47.7614431 28.4436438 57.2903195 29.6372876 50.3951597 35.4313562 52.0228862 43.6127124"></polygon>
-        <polygon id="Star" stroke="#979797" fill="#D3C119" points="96.5 48.75 87.9771138 52.6127124 89.6048403 44.4313562 82.7096805 38.6372876 92.2385569 37.4436438 96.5 30 100.761443 37.4436438 110.290319 38.6372876 103.39516 44.4313562 105.022886 52.6127124"></polygon>
-        <polygon id="Star" stroke="#979797" fill="#D3C119" points="155.5 39.75 146.977114 43.6127124 148.60484 35.4313562 141.709681 29.6372876 151.238557 28.4436438 155.5 21 159.761443 28.4436438 169.290319 29.6372876 162.39516 35.4313562 164.022886 43.6127124"></polygon>
-        <polygon id="Star" stroke="#979797" fill="#D3C119" points="238.5 40.75 229.977114 44.6127124 231.60484 36.4313562 224.709681 30.6372876 234.238557 29.4436438 238.5 22 242.761443 29.4436438 252.290319 30.6372876 245.39516 36.4313562 247.022886 44.6127124"></polygon>
-        <polygon id="Star" stroke="#979797" fill="#D3C119" points="331.5 39.75 322.977114 43.6127124 324.60484 35.4313562 317.709681 29.6372876 327.238557 28.4436438 331.5 21 335.761443 28.4436438 345.290319 29.6372876 338.39516 35.4313562 340.022886 43.6127124"></polygon>
-        <polygon id="Star" stroke="#979797" fill="#D3C119" points="384.5 28.75 375.977114 32.6127124 377.60484 24.4313562 370.709681 18.6372876 380.238557 17.4436438 384.5 10 388.761443 17.4436438 398.290319 18.6372876 391.39516 24.4313562 393.022886 32.6127124"></polygon>
-        <polygon id="Star" stroke="#979797" fill="#D3C119" points="459.5 51.75 450.977114 55.6127124 452.60484 47.4313562 445.709681 41.6372876 455.238557 40.4436438 459.5 33 463.761443 40.4436438 473.290319 41.6372876 466.39516 47.4313562 468.022886 55.6127124"></polygon>
+        <polygon id="Star" stroke="#979797" fill="#D3C119" points="14.5 39.75 5.97711384 43.6127124 7.60484026 35.4313562 0.709680514 29.6372876 10.2385569 28.4436438 14.5 21 18.7614431 28.4436438 28.2903195 29.6372876 21.3951597 35.4313562 23.0228862 43.6127124"></polygon>
+        <polygon id="Star" stroke="#979797" fill="#D3C119" points="67.5 48.75 58.9771138 52.6127124 60.6048403 44.4313562 53.7096805 38.6372876 63.2385569 37.4436438 67.5 30 71.7614431 37.4436438 81.2903195 38.6372876 74.3951597 44.4313562 76.0228862 52.6127124"></polygon>
+        <polygon id="Star" stroke="#979797" fill="#D3C119" points="126.5 39.75 117.977114 43.6127124 119.60484 35.4313562 112.709681 29.6372876 122.238557 28.4436438 126.5 21 130.761443 28.4436438 140.290319 29.6372876 133.39516 35.4313562 135.022886 43.6127124"></polygon>
+        <polygon id="Star" stroke="#979797" fill="#D3C119" points="209.5 40.75 200.977114 44.6127124 202.60484 36.4313562 195.709681 30.6372876 205.238557 29.4436438 209.5 22 213.761443 29.4436438 223.290319 30.6372876 216.39516 36.4313562 218.022886 44.6127124"></polygon>
     </g>
 </svg>
