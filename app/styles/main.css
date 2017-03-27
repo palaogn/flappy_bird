@@ -4,7 +4,7 @@
 	left: 0;
 	width: 5em;
 	height: 5em;
-	background: blue;
+	background: yellow;
 }
 
 .Scoreboard {
@@ -60,5 +60,22 @@ height: 57.6em;
 margin-left: -51.2em;
 margin-top: -28.8em;
 overflow: hidden;
-background: red;
+background: white;
+
+}
+.Ground {
+	background: url(../images/Ground.svg) 50% 50% no-repeat;
+	width: 122.4em;
+	height: 5.8em;
+	background-size: 100%;
+	-webkit-animation: run 3s infinite;
+}
+
+@-webkit-keyframes run {
+	from {
+		left: 20em;
+	}
+	to {
+		right: 20em;
+	}
 }

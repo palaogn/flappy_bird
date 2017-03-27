@@ -20,6 +20,8 @@ window.Game = (function() {
 		);
 		el.css('fontSize', fontSize + 'px');
 
+		var audio = document.getElementById('background_audio');
+
 		// Cache a bound onFrame since we need it each frame.
 		this.onFrame = this.onFrame.bind(this);
 	};
