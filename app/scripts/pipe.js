@@ -7,12 +7,6 @@ window.Pipe = (function() {
   var SPEED = 30; // * 10 pixels per second
   var WIDTH = 12.2;
   var HEIGHT = 100.6;
-  var INITIAL_POSITION_X = 102.4;
-  var INITIAL_POSITION_Y_1 = -30;
-	var INITIAL_POSITION_Y_2 = -15;
-	var INITIAL_POSITION_Y_3 = -20;
-	var INITIAL_POSITION_Y_4 = -35;
-	var INITIAL_POSITION_Y_4 = -25;
 
   var Pipe = function(el, game) {
   	this.el = el;
@@ -22,13 +16,16 @@ window.Pipe = (function() {
 
   //Resets the state of the pipe for a new game
   Pipe.prototype.reset = function() {
-  	this.pos.x = INITIAL_POSITION_X;
-  	this.pos.y = INITIAL_POSITION_Y_2;
+  	this.pos.x = 102.4;
+  	this.pos.y = -(Math.floor(Math.random() * (15) + 15));
   };
 
   Pipe.prototype.onFrame = function(delta) {
 		this.pos.x -= delta * SPEED;
-
+		if(this.pos.x <= -WIDTH)
+		{
+			this.reset();
+		}
   	this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
   };
 
