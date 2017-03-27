@@ -2,6 +2,8 @@
 window.Game = (function() {
 	'use strict';
 
+
+
 	/**
 	 * Main game class.
 	 * @param {Element} el jQuery element containing the game.
@@ -13,13 +15,20 @@ window.Game = (function() {
 		this.pipe = new window.Pipe(this.el.find('.Pipe'), this);
 		this.isPlaying = false;
 
+		function resize() {
+			let fontSize = Math.min(
+				window.innerWidth / Game.prototype.WORLD_WIDTH,
+				window.innerHeight / Game.prototype.WORLD_HEIGHT
+			);
+			el.css('fontSize', fontSize + 'px');
+		}
+
+		resize();
+
 		//game scales to the size of the screen
 		//only does in the start and on Restart
-		let fontSize = Math.min(
-			window.innerWidth / Game.prototype.WORLD_WIDTH,
-			window.innerHeight / Game.prototype.WORLD_HEIGHT
-		);
-		el.css('fontSize', fontSize + 'px');
+		$(window).on('resize', resize);
+
 
 		// Cache a bound onFrame since we need it each frame.
 		this.onFrame = this.onFrame.bind(this);

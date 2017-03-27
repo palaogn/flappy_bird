@@ -67,9 +67,9 @@ background: #b3e3f9;
 .Ground {
 	background: url(../images/GroundMin.svg) 50% 50% repeat-x;
 	position: absolute;
-	left: -10em;
+	left: 0em;
 	top: 51.8em;
-	width: 122.4em;
+	width: 150.8em;
 	height: 5.8em;
 	background-size: contain;
 	-webkit-animation: run 1s infinite linear;
@@ -87,11 +87,11 @@ background: #b3e3f9;
 }
 
 /*Makes the ground go from left and right */
-@-webkit-keyframes run {
+@keyframes run {
 	from {
-		left: -1em;
+		transform: translate3d(0, 0, 0);
 	}
 	to {
-		left: -20em;
+		transform: translate3d(-24.2em, 0, 0);
 	}
 }
