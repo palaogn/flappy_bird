@@ -2,9 +2,11 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 5em;
-	height: 5em;
+	width: 6em;
+	height: 6em;
 	background: yellow;
+	background: url(../images/Star.svg) 50% 50% no-repeat;
+	background-size: 100%;
 }
 
 .Scoreboard {
@@ -71,6 +73,37 @@ background: white;
 	height: 5.8em;
 	background-size: 100%;
 	-webkit-animation: run 1s infinite;
+}
+
+.PipeT1_1 {
+	background: url(../images/topPipe.svg) 50% 50% no-repeat;
+	width: 12.2em;
+	height: 44.4em;
+	position: absolute;
+	top: -20em;
+	left: 90.2em;
+	background-size: 100%;
+	-webkit-animation: pipeSlide 10s;
+}
+.PipeB1_1 {
+	background: url(../images/bottomPipe.svg) 50% 50% no-repeat;
+	width: 12.2em;
+	height: 44.4em;
+	position: absolute;
+	top: 35em;
+	left: 90.2em;
+	background-size: 100%;
+	-webkit-animation: pipeSlide 10s;
+}
+
+/*Makes the pipe slide from right to left over the screen */
+@-webkit-keyframes pipeSlide {
+	from {
+		left: 102.4em;
+	}
+	to {
+		left: -12.2em;
+	}
 }
 
 /*Makes the ground go from left and right */
