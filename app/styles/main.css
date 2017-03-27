@@ -81,9 +81,9 @@ background: white;
 	height: 44.4em;
 	position: absolute;
 	top: -20em;
-	left: 90.2em;
+	left: 122.4em;
 	background-size: 100%;
-	-webkit-animation: pipeSlide 10s;
+	/*-webkit-animation: pipeSlide 10s; */
 }
 .PipeB1_1 {
 	background: url(../images/bottomPipe.svg) 50% 50% no-repeat;
@@ -91,15 +91,35 @@ background: white;
 	height: 44.4em;
 	position: absolute;
 	top: 35em;
-	left: 90.2em;
+	left: 122.4em;
 	background-size: 100%;
-	-webkit-animation: pipeSlide 10s;
+	/*-webkit-animation: pipeSlide 10s; */
+}
+.PipeT1_2 {
+	background: url(../images/topPipe.svg) 50% 50% no-repeat;
+	width: 12.2em;
+	height: 44.4em;
+	position: absolute;
+	top: -30em;
+	left: 122.4em;
+	background-size: 100%;
+	/* -webkit-animation: pipeSlide 10s; */
+}
+.PipeB1_2 {
+	background: url(../images/bottomPipe.svg) 50% 50% no-repeat;
+	width: 12.2em;
+	height: 44.4em;
+	position: absolute;
+	top: 25em;
+	left: 122.4em;
+	background-size: 100%;
+	/*-webkit-animation: pipeSlide 10s; */
 }
 
 /*Makes the pipe slide from right to left over the screen */
 @-webkit-keyframes pipeSlide {
 	from {
-		left: 102.4em;
+		left: 122.4em;
 	}
 	to {
 		left: -12.2em;
