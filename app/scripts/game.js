@@ -10,6 +10,7 @@ window.Game = (function() {
 	var Game = function(el) {
 		this.el = el;
 		this.player = new window.Player(this.el.find('.Player'), this);
+		this.pipe = new window.Pipe(this.el.find('.Pipe'), this);
 		this.isPlaying = false;
 
 		//game scales to the size of the screen
@@ -41,6 +42,7 @@ window.Game = (function() {
 
 		// Update game entities.
 		this.player.onFrame(delta);
+		this.pipe.onFrame(delta);
 
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
@@ -63,6 +65,7 @@ window.Game = (function() {
 	 */
 	Game.prototype.reset = function() {
 		this.player.reset();
+		this.pipe.reset();
 	};
 
 	/**
