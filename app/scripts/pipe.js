@@ -17,7 +17,6 @@ window.Pipe = (function() {
   //Resets the state of the pipe for a new game
   Pipe.prototype.reset = function() {
 		this.game.score++;
-		console.log(this.game.score);
   	this.pos.x = 102.4;
   	this.pos.y = -(Math.floor(Math.random() * (15) + 15));
 		this.gap_begin = 43 + this.pos.y;
