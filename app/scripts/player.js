@@ -8,7 +8,6 @@ window.Player = (function() {
 	var SPEED = 30; // * 10 pixels per second
 	var WIDTH = 5;
 	var HEIGHT = 5;
-	var GRAVITY = 0.25;
 	var INITIAL_POSITION_X = 30;
 	var INITIAL_POSITION_Y = 25;
 
@@ -17,6 +16,11 @@ window.Player = (function() {
 		this.game = game;
 		this.pos = { x: 0, y: 0 };
 		this.velocity = 0;
+		this.gravity = 0.03;
+		this.jumpHeight = 0.6;
+		this.jump = function() {
+			this.velocity = -this.jumpHeight;
+		}
 	};
 
 	/**
@@ -41,11 +45,12 @@ window.Player = (function() {
 			this.pos.y -= delta * SPEED;
 		}
 		if (Controls.keys.space) {
-			this.pos.y -= delta * SPEED;
+			this.jump();
 		}
-		else {
-			this.pos.y += 0.3;
-		}
+
+		this.velocity += this.gravity;
+		this.pos.y += this.velocity;
+
 
 		this.checkCollisionWithBounds();
 
