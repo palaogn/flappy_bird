@@ -18,6 +18,7 @@
 	margin-left: -20em;
 	box-sizing: border-box;
 	background: #0d7a64;
+	border: 0.5em solid white;
 	text-align: center;
 	-webkit-transform: translate(0, -40em);
 	-webkit-transition: -webkit-transform 0.5s;
