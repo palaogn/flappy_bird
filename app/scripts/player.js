@@ -37,7 +37,7 @@ window.Player = (function() {
 	};
 
 	Player.prototype.onFrame = function(delta) {
-		if (Controls.keys.space) {
+		if (Controls.keys.space || Controls.keys.touchDown) {
 			document.getElementById('jump_sound').play();
 			this.jump();
 		}

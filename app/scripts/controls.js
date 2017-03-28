@@ -6,6 +6,8 @@ window.Controls = (function() {
      * Key codes we're interested in.
      */
     var KEYS = {
+        10: 'touchDown',
+        12: 'touchUp',
         32: 'space',
         37: 'left',
         38: 'up',
@@ -23,16 +25,21 @@ window.Controls = (function() {
         this._didJump = false;
         this.keys = {};
         $(window)
-            .on('keydown', this._onKeyDown.bind(this))
-            .on('keyup', this._onKeyUp.bind(this));
+        //    .on('keydown', this._onKeyDown.bind(this))
+        //    .on('keyup', this._onKeyUp.bind(this))
+            .on('touchstart', this._onKeyDown.bind(this))
+            .on('touchend', this._onKeyUp.bind(this));
     };
+
+
+
 
     Controls.prototype._onKeyDown = function(e) {
         // Only jump if space wasn't pressed.
-        if (e.keyCode === 32 && !this.keys.space) {
+        if (e.keyCode === 32 && !this.keys.space || e.keyCode === 10 && !this.key.touchDown) {
             this._didJump = true;
         }
-
+        console.log(e.keyCode);
         // Remember that this button is down.
         if (e.keyCode in KEYS) {
             var keyName = KEYS[e.keyCode];
@@ -57,7 +64,7 @@ window.Controls = (function() {
         this._didJump = false;
         return answer;
     };
-    
+
     // Export singleton.
     return new Controls();
 })();
