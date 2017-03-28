@@ -91,12 +91,36 @@ background: #b3e3f9;
 	width: 12.2em;
 	height: 100.6em;
 	position: absolute;
-	/*top: -50em;
-	left: 30em; */
-	/* goes out of screen left: 122.4em; */
 	background-size: 100%;
 }
-
+.Cloud1 {
+	background: url(../images/Cloud1.svg) 50% 50% no-repeat;
+	position: absolute;
+	width: 123.3em;
+	height: 37.7em;
+	background-size: contain;
+}
+.Cloud2 {
+	background: url(../images/Cloud2.svg) 50% 50% no-repeat;
+	position: absolute;
+	width: 123.3em;
+	height: 37.7em;
+	background-size: contain;
+}
+.Cloud3 {
+	background: url(../images/Cloud3.svg) 50% 50% no-repeat;
+	position: absolute;
+	width: 147.2em;
+	height: 37.7em;
+	background-size: contain;
+}
+.Cloud4 {
+	background: url(../images/Cloud4.svg) 50% 50% no-repeat;
+	position: absolute;
+	width: 59.9em;
+	height: 37.7em;
+	background-size: contain;
+}
 /*Makes the ground go from left and right */
 @keyframes run {
 	from {
