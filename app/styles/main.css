@@ -121,6 +121,18 @@ background: #b3e3f9;
 	height: 37.7em;
 	background-size: contain;
 }
+.Mute-music {
+	background: url(../images/mute.png) 50% 50% no-repeat;
+	position: absolute;
+	width: 3em;
+	height: 3em;
+	left: 3em;
+	top: 1em;
+	border-radius: 100%;
+	border: 0.5em solid white;
+	background-size: contain;
+}
+
 /*Makes the ground go from left and right */
 @keyframes run {
 	from {
