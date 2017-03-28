@@ -87,6 +87,7 @@ window.Game = (function() {
 	 */
 	Game.prototype.start = function() {
 		this.score = 0;
+		$(Ground).css('animation', 'run 1s infinite linear');
 		this.reset();
 
 		// Restart the onFrame loop
@@ -112,6 +113,7 @@ window.Game = (function() {
 	 */
 	Game.prototype.gameover = function() {
 		this.isPlaying = false;
+		$(Ground).css('animation', 'run 0s infinite linear');
 		document.getElementById("game_score").innerHTML = this.score-1;
 		// Should be refactored into a Scoreboard class.
 		var that = this;
