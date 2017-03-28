@@ -15,6 +15,7 @@ window.Game = (function() {
 		this.pipe = new window.Pipe(this.el.find('.Pipe'), this);
 		this.isPlaying = false;
 
+		//game scales to the size of the screen
 		function resize() {
 			let fontSize = Math.min(
 				window.innerWidth / Game.prototype.WORLD_WIDTH,
@@ -25,8 +26,7 @@ window.Game = (function() {
 
 		resize();
 
-		//game scales to the size of the screen
-		//only does in the start and on Restart
+		//every time the window is resized, it scales
 		$(window).on('resize', resize);
 
 
