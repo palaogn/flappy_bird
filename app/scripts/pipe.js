@@ -16,6 +16,8 @@ window.Pipe = (function() {
 
   //Resets the state of the pipe for a new game
   Pipe.prototype.reset = function() {
+		this.game.score++;
+		console.log(this.game.score);
   	this.pos.x = 102.4;
   	this.pos.y = -(Math.floor(Math.random() * (15) + 15));
 		this.gap_begin = 43 + this.pos.y;
@@ -24,21 +26,22 @@ window.Pipe = (function() {
 
   Pipe.prototype.onFrame = function(delta) {
 		this.pos.x -= delta * SPEED;
+		var goneTrough = false;
+
 		if(this.pos.x <= -WIDTH)
 		{
 			this.reset();
 		}
+
 		this.checkPlayerCrash();
 
   	this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
   };
 
+
 	Pipe.prototype.checkPlayerCrash = function() {
 		if(this.game.player.pos.y <= this.gap_begin
 		|| this.game.player.pos.y >= this.gap_end) {
-			console.log('positon lower than: ' + this.game.player.pos.x + 6.1);
-			console.log('pipe pos: ' + this.pos.x);
-			console.log('positon higher than: ' + this.game.player.pos.x + 8);
 				if(this.pos.x <= this.game.player.pos.x + 6.1
 				&& this.pos.x >= this.game.player.pos.x - 6.1) {
 					return this.game.gameover();

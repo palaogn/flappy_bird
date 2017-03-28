@@ -2,8 +2,6 @@
 window.Game = (function() {
 	'use strict';
 
-
-
 	/**
 	 * Main game class.
 	 * @param {Element} el jQuery element containing the game.
@@ -14,6 +12,7 @@ window.Game = (function() {
 		this.player = new window.Player(this.el.find('.Player'), this);
 		this.pipe = new window.Pipe(this.el.find('.Pipe'), this);
 		this.isPlaying = false;
+		this.score = 0;
 
 		//game scales to the size of the screen
 		function resize() {
@@ -61,6 +60,7 @@ window.Game = (function() {
 	 * Starts a new game.
 	 */
 	Game.prototype.start = function() {
+		this.score = 0;
 		this.reset();
 
 		// Restart the onFrame loop

@@ -17,7 +17,7 @@
 	width: 40em;
 	margin-left: -20em;
 	box-sizing: border-box;
-	background: purple;
+	background: #0d7a64;
 	text-align: center;
 	-webkit-transform: translate(0, -40em);
 	-webkit-transition: -webkit-transform 0.5s;
@@ -31,16 +31,26 @@
 }
 
 .Scoreboard-restart {
-	margin-top: 20em;
+	margin-top: 0em;
 	font-size: inherit;
 	padding: 0.4em 1.5em;
-	border: 0.2em solid white;
+	border: 0.3em solid white;
 	background: none;
 	cursor: pointer;
+}
+.Scoreboard-restartTitle {
+font-family: 'Comic Sans MS', serif;
+font-size: 3.5em;
+color: white;
 }
 .Scoreboard-restartText {
 font-family: 'Comic Sans MS', serif;
 font-size: 2.4em;
+color: white;
+}
+.Scoreboard-Text {
+font-family: 'Comic Sans MS', serif;
+font-size: 2.8em;
 color: white;
 }
 body {
