@@ -18,6 +18,9 @@ window.Player = (function() {
 		this.velocity = 0;
 		this.gravity = 0.03;
 		this.jumpHeight = 0.6;
+		/*
+		 * Makes the player jump
+		 */
 		this.jump = function() {
 			this.velocity = -this.jumpHeight;
 		}
@@ -27,23 +30,27 @@ window.Player = (function() {
 	 * Resets the state of the player for a new game.
 	 */
 	Player.prototype.reset = function() {
+		console.log("Reseting player");
 		this.pos.x = INITIAL_POSITION_X;
 		this.pos.y = INITIAL_POSITION_Y;
+		this.velocity = 0;
 	};
 
 	Player.prototype.onFrame = function(delta) {
-	/*	if (Controls.keys.right) {
+		/*
+		if (Controls.keys.right) {
 			this.pos.x += delta * SPEED;
 		}
 		if (Controls.keys.left) {
 			this.pos.x -= delta * SPEED;
-		} */
+		}
 		if (Controls.keys.down) {
 			this.pos.y += delta * SPEED;
 		}
 		if (Controls.keys.up) {
 			this.pos.y -= delta * SPEED;
 		}
+		*/
 		if (Controls.keys.space) {
 			this.jump();
 		}
