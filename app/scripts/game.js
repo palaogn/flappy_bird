@@ -11,6 +11,10 @@ window.Game = (function() {
 		this.el = el;
 		this.player = new window.Player(this.el.find('.Player'), this);
 		this.pipe = new window.Pipe(this.el.find('.Pipe'), this);
+		this.cloud1 = new window.Cloud(this.el.find('.Cloud1'), this);
+		this.cloud2 = new window.Cloud(this.el.find('.Cloud2'), this);
+		this.cloud3 = new window.Cloud(this.el.find('.Cloud3'), this);
+		this.cloud4 = new window.Cloud(this.el.find('.Cloud4'), this);
 		this.isPlaying = false;
 		this.score = 0;
 
@@ -49,6 +53,10 @@ window.Game = (function() {
 		this.lastFrame = now;
 
 		// Update game entities.
+		this.cloud1.onFrame(0.04, 123.3);
+		this.cloud2.onFrame(0.03, 123.3);
+		this.cloud3.onFrame(0.01, 147.2);
+		this.cloud4.onFrame(0.08, 59.9);
 		this.player.onFrame(delta);
 		this.pipe.onFrame(delta);
 
@@ -75,6 +83,10 @@ window.Game = (function() {
 	Game.prototype.reset = function() {
 		this.player.reset();
 		this.pipe.reset();
+		this.cloud1.reset();
+		this.cloud2.reset();
+		this.cloud3.reset();
+		this.cloud4.reset();
 	};
 
 	/**
