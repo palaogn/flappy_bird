@@ -25,8 +25,8 @@ window.Controls = (function() {
         this._didJump = false;
         this.keys = {};
         $(window)
-        //    .on('keydown', this._onKeyDown.bind(this))
-        //    .on('keyup', this._onKeyUp.bind(this))
+            .on('keydown', this._onKeyDown.bind(this))
+            .on('keyup', this._onKeyUp.bind(this))
             .on('touchstart', this._onKeyDown.bind(this))
             .on('touchend', this._onKeyUp.bind(this));
     };
