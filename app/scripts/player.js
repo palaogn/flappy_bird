@@ -15,6 +15,12 @@ window.Player = (function() {
 		this.el = el;
 		this.game = game;
 		this.pos = { x: 0, y: 0 };
+		this.velocity = 0;
+		this.gravity = 0.03;
+		this.jumpHeight = 0.6;
+		this.jump = function() {
+			this.velocity = -this.jumpHeight;
+		}
 	};
 
 	/**
@@ -39,8 +45,12 @@ window.Player = (function() {
 			this.pos.y -= delta * SPEED;
 		}
 		if (Controls.keys.space) {
-			this.pos.y -= delta * SPEED;
+			this.jump();
 		}
+
+		this.velocity += this.gravity;
+		this.pos.y += this.velocity;
+
 
 		this.checkCollisionWithBounds();
 
