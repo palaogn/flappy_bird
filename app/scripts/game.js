@@ -102,7 +102,6 @@ window.Game = (function() {
 			.addClass('is-visible')
 			.find('.Scoreboard-restart')
 				.one('click', function() {
-					//console.log("wat");
 					scoreboardEl.removeClass('is-visible');
 					that.start();
 				});
