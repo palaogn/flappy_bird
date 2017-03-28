@@ -2,6 +2,8 @@
 window.Game = (function() {
 	'use strict';
 
+	var Controls = window.Controls;
+
 	/**
 	 * Main game class.
 	 * @param {Element} el jQuery element containing the game.
@@ -16,6 +18,7 @@ window.Game = (function() {
 		this.cloud3 = new window.Cloud(this.el.find('.Cloud3'), this);
 		this.cloud4 = new window.Cloud(this.el.find('.Cloud4'), this);
 		this.isPlaying = false;
+		this.isMuted = false;
 		this.score = 0;
 
 		//game scales to the size of the screen
@@ -32,6 +35,27 @@ window.Game = (function() {
 		//every time the window is resized, it scales
 		$(window).on('resize', resize);
 
+		//document.getElementById('background_sound').muted;
+
+		$(Mute).click( function () {
+		//	this.backgroundAudio = document.getElementById('background_sound');
+		//	this.backgroundAudio.muted = true;
+		document.getElementById('background_sound').muted = true;
+			if(this.isMuted) {
+				$(Mute).css('background-image', 'url(../images/unMute.png)');
+				document.getElementById('background_sound').muted = false;
+				document.getElementById('crash_sound').muted = false;
+				document.getElementById('jump_sound').muted = false;
+				this.isMuted = false;
+			}
+			else {
+				$(Mute).css('background-image', 'url(../images/mute.png)');
+				document.getElementById('background_sound').muted = true;
+				document.getElementById('crash_sound').muted = true;
+				document.getElementById('jump_sound').muted = true;
+				this.isMuted = true;
+			}
+		})
 
 		// Cache a bound onFrame since we need it each frame.
 		this.onFrame = this.onFrame.bind(this);
@@ -53,7 +77,7 @@ window.Game = (function() {
 		this.lastFrame = now;
 
 		// Update game entities.
-		this.cloud1.onFrame(0.04, 123.3);
+		this.cloud1.onFrame(0.05, 123.3);
 		this.cloud2.onFrame(0.03, 123.3);
 		this.cloud3.onFrame(0.01, 147.2);
 		this.cloud4.onFrame(0.08, 59.9);
@@ -68,13 +92,16 @@ window.Game = (function() {
 	 * Starts a new game.
 	 */
 	Game.prototype.start = function() {
-		this.score = 0;
-		this.reset();
 
-		// Restart the onFrame loop
-		this.lastFrame = +new Date() / 1000;
-		window.requestAnimationFrame(this.onFrame);
-		this.isPlaying = true;
+			this.score = 0;
+			$(Ground).css('animation', 'run 0.8s infinite linear');
+
+			this.isPlaying = true;
+			this.reset();
+			// Restart the onFrame loop
+			this.lastFrame = +new Date() / 1000;
+			window.requestAnimationFrame(this.onFrame);
+
 	};
 
 	/**
@@ -94,6 +121,8 @@ window.Game = (function() {
 	 */
 	Game.prototype.gameover = function() {
 		this.isPlaying = false;
+		document.getElementById('crash_sound').play();
+		$(Ground).css('animation', 'run 0s infinite linear');
 		document.getElementById("game_score").innerHTML = this.score-1;
 		// Should be refactored into a Scoreboard class.
 		var that = this;

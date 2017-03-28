@@ -24,20 +24,15 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
-      <!---  <audio autoplay loop id="background_sound">
-          <source src="/../sounds/background.m4a" type="audio/mpeg">
-        </audio> --->
-
         <div class="GameCanvas">
             <div class="Cloud1"></div>
             <div class="Cloud2"></div>
             <div class="Cloud3"></div>
             <div class="Cloud4"></div>
             <div class="Player"></div>
-            <div class="Mute-music"></div>
+            <button class="Mute-music" id="Mute"></button>
             <div class="Pipe"></div>
-            <div class="Ground"></div>
+            <div id="Ground" class="Ground"></div>
             <div class="Scoreboard">
                 <p class="Scoreboard-restartTitle">Game over :(</p>
                 <p class="Scoreboard-restartText"> Your score: </p>
@@ -46,6 +41,15 @@
                     <span class="Scoreboard-restartText">Restart</span>
                 </button>
             </div>
+            <audio autoplay loop id="background_sound">
+              <source src="/../sounds/background.m4a" type="audio/mpeg">
+            </audio>
+            <audio id="jump_sound">
+              <source src="/../sounds/jump.wav" type="audio/mpeg">
+            </audio>
+            <audio id="crash_sound">
+              <source src="/../sounds/crash.mp3" type="audio/mpeg">
+            </audio>
         </div>
 
         <!-- build:js scripts/vendor.js -->
