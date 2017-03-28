@@ -16,6 +16,7 @@ window.Game = (function() {
 		this.cloud3 = new window.Cloud(this.el.find('.Cloud3'), this);
 		this.cloud4 = new window.Cloud(this.el.find('.Cloud4'), this);
 		this.isPlaying = false;
+		this.isMuted = false;
 		this.score = 0;
 
 		//game scales to the size of the screen
@@ -32,6 +33,23 @@ window.Game = (function() {
 		//every time the window is resized, it scales
 		$(window).on('resize', resize);
 
+		//document.getElementById('background_sound').muted;
+
+		$(Mute).click( function () {
+		//	this.backgroundAudio = document.getElementById('background_sound');
+		//	this.backgroundAudio.muted = true;
+		document.getElementById('background_sound').muted = true;
+			if(this.isMuted) {
+				$(Mute).css('background-image', 'url(../images/mute.png)');
+				document.getElementById('background_sound').muted = false;
+				this.isMuted = false;
+			}
+			else {
+				$(Mute).css('background-image', 'url(../images/unMute.png)');
+				document.getElementById('background_sound').muted = true;
+				this.isMuted = true;
+			}
+		})
 
 		// Cache a bound onFrame since we need it each frame.
 		this.onFrame = this.onFrame.bind(this);
