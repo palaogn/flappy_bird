@@ -2,6 +2,8 @@
 window.Game = (function() {
 	'use strict';
 
+	var Controls = window.Controls;
+
 	/**
 	 * Main game class.
 	 * @param {Element} el jQuery element containing the game.
@@ -71,7 +73,7 @@ window.Game = (function() {
 		this.lastFrame = now;
 
 		// Update game entities.
-		this.cloud1.onFrame(0.04, 123.3);
+		this.cloud1.onFrame(0.05, 123.3);
 		this.cloud2.onFrame(0.03, 123.3);
 		this.cloud3.onFrame(0.01, 147.2);
 		this.cloud4.onFrame(0.08, 59.9);
@@ -86,14 +88,16 @@ window.Game = (function() {
 	 * Starts a new game.
 	 */
 	Game.prototype.start = function() {
-		this.score = 0;
-		$(Ground).css('animation', 'run 1s infinite linear');
-		this.reset();
 
-		// Restart the onFrame loop
-		this.lastFrame = +new Date() / 1000;
-		window.requestAnimationFrame(this.onFrame);
-		this.isPlaying = true;
+			this.score = 0;
+			$(Ground).css('animation', 'run 0.8s infinite linear');
+
+			this.isPlaying = true;
+			this.reset();
+			// Restart the onFrame loop
+			this.lastFrame = +new Date() / 1000;
+			window.requestAnimationFrame(this.onFrame);
+
 	};
 
 	/**
