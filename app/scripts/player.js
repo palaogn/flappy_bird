@@ -18,6 +18,7 @@ window.Player = (function() {
 		this.velocity = 0;
 		this.gravity = 0.03;
 		this.jumpHeight = 0.6;
+		this.angle = 0;
 		/*
 		 * Makes the player jump
 		 */
@@ -48,7 +49,7 @@ window.Player = (function() {
 		this.checkCollisionWithBounds();
 
 		// Update UI
-		this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
+		this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em) rotate(' + this.velocity * 40 + 'deg)');
 	};
 
 	Player.prototype.checkCollisionWithBounds = function() {
