@@ -17,7 +17,7 @@ window.Player = (function() {
 		this.pos = { x: 0, y: 0 };
 		this.velocity = 0;
 		this.gravity = 0.03;
-		this.jumpHeight = 0.6;
+		this.jumpHeight = 0.4;
 		this.jump = function() {
 			this.velocity = -this.jumpHeight;
 		}
@@ -29,6 +29,7 @@ window.Player = (function() {
 	Player.prototype.reset = function() {
 		this.pos.x = INITIAL_POSITION_X;
 		this.pos.y = INITIAL_POSITION_Y;
+		this.velocity = 0;
 	};
 
 	Player.prototype.onFrame = function(delta) {
