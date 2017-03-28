@@ -44,11 +44,15 @@ window.Game = (function() {
 			if(this.isMuted) {
 				$(Mute).css('background-image', 'url(../images/unMute.png)');
 				document.getElementById('background_sound').muted = false;
+				document.getElementById('crash_sound').muted = false;
+				document.getElementById('jump_sound').muted = false;
 				this.isMuted = false;
 			}
 			else {
 				$(Mute).css('background-image', 'url(../images/mute.png)');
 				document.getElementById('background_sound').muted = true;
+				document.getElementById('crash_sound').muted = true;
+				document.getElementById('jump_sound').muted = true;
 				this.isMuted = true;
 			}
 		})
@@ -117,6 +121,7 @@ window.Game = (function() {
 	 */
 	Game.prototype.gameover = function() {
 		this.isPlaying = false;
+		document.getElementById('crash_sound').play();
 		$(Ground).css('animation', 'run 0s infinite linear');
 		document.getElementById("game_score").innerHTML = this.score-1;
 		// Should be refactored into a Scoreboard class.

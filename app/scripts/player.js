@@ -51,6 +51,7 @@ window.Player = (function() {
 			this.pos.y -= delta * SPEED;
 		} */
 		if (Controls.keys.space) {
+			document.getElementById('jump_sound').play();
 			this.jump();
 		}
 
