@@ -40,12 +40,12 @@ window.Game = (function() {
 		//	this.backgroundAudio.muted = true;
 		document.getElementById('background_sound').muted = true;
 			if(this.isMuted) {
-				$(Mute).css('background-image', 'url(../images/mute.png)');
+				$(Mute).css('background-image', 'url(../images/unMute.png)');
 				document.getElementById('background_sound').muted = false;
 				this.isMuted = false;
 			}
 			else {
-				$(Mute).css('background-image', 'url(../images/unMute.png)');
+				$(Mute).css('background-image', 'url(../images/mute.png)');
 				document.getElementById('background_sound').muted = true;
 				this.isMuted = true;
 			}
