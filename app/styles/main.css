@@ -121,7 +121,8 @@ background: #b3e3f9;
 	background-size: contain;
 }
 .Mute-music {
-	background: url(../images/unMute.png) 50% 50% no-repeat;
+
+	background: url(../images/unMute.png), white;
 	position: absolute;
 	width: 3em;
 	height: 3em;
