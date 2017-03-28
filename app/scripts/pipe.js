@@ -14,11 +14,12 @@ window.Pipe = (function() {
   	this.pos = {x: 0, y: 0};
   }
 
-  //Resets the state of the pipe for a new game
   Pipe.prototype.reset = function() {
 		this.game.score++;
   	this.pos.x = 102.4;
   	this.pos.y = -(Math.floor(Math.random() * (15) + 15));
+
+		// calculates the coordinates of the random gap from the y coordinates
 		this.gap_begin = 43 + this.pos.y;
 		this.gap_end = 36 + this.pos.y + 15;
   };
@@ -27,6 +28,7 @@ window.Pipe = (function() {
 		this.pos.x -= delta * SPEED;
 		var goneTrough = false;
 
+		//when pipe goes off screen a new one is made
 		if(this.pos.x <= -WIDTH)
 		{
 			this.reset();
@@ -37,7 +39,7 @@ window.Pipe = (function() {
   	this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
   };
 
-
+	// checks if the player crashed into the pipes
 	Pipe.prototype.checkPlayerCrash = function() {
 		if(this.game.player.pos.y <= this.gap_begin
 		|| this.game.player.pos.y >= this.gap_end) {

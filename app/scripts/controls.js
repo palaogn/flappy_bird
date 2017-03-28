@@ -31,15 +31,11 @@ window.Controls = (function() {
             .on('touchend', this._onKeyUp.bind(this));
     };
 
-
-
-
     Controls.prototype._onKeyDown = function(e) {
         // Only jump if space wasn't pressed.
         if (e.keyCode === 32 && !this.keys.space || e.keyCode === 10 && !this.key.touchDown) {
             this._didJump = true;
         }
-        console.log(e.keyCode);
         // Remember that this button is down.
         if (e.keyCode in KEYS) {
             var keyName = KEYS[e.keyCode];
